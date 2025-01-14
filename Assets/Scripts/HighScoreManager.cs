@@ -27,19 +27,21 @@ public class HighScoreManager
 
         highScores.Add(newScore);
         highScores = highScores.OrderByDescending(x => x.score).Take(MAX_SCORES).ToList();
-        SaveScores();
+        //SaveScores();
     }
+    // json file could be wrong == Error:
+    // failed to write file with Usersettings with error 3
+    /*
+        void SaveScores()
+        {
+            string json = JsonUtility.ToJson(new { scores = highScores });
+            PlayerPrefs.SetString("highScores", json);
+            PlayerPrefs.Save();
+        }
 
-    void SaveScores()
-    {
-        string json = JsonUtility.ToJson(new { scores = highScores });
-        PlayerPrefs.SetString("highScores", json);
-        PlayerPrefs.Save();
-    }
-
-    void LoadScores()
-    {
-        string json = PlayerPrefs.GetString("highScores", "");
-        Console.WriteLine(String.Join(",", highScores.OrderByDescending(x => x.score).Take(MAX_SCORES).ToList()));
-    }
+        void LoadScores()
+        {
+            string json = PlayerPrefs.GetString("highScores", "");
+            Console.WriteLine(String.Join(",", highScores.OrderByDescending(x => x.score).Take(MAX_SCORES).ToList()));
+        }*/
 }
