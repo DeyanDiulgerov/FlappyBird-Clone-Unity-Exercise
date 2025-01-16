@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FlyScript : MonoBehaviour
 {
+    private BirdSkinManager birdSkinAnimation;
     public GameManager gameManager;
     public float velocity = 1;
     private Rigidbody2D rb;

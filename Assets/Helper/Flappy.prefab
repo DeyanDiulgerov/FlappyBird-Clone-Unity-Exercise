@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3bb56783f83d2246987ad561e890782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  birdSkin: {fileID: 0}
   gameManager: {fileID: 0}
   velocity: 1.5
 --- !u!70 &8054586831093203205

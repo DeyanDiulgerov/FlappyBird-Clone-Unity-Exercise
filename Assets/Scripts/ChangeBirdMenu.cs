@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
-using static CharacterSelect;
 
-public class Bird : MonoBehaviour
+public class ChangeBirdMenu : MonoBehaviour
 {
     public Image spriteRenderer;  // Reference to the SpriteRenderer component
     public Sprite blueBirdSprite;          // Blue bird sprite
@@ -12,30 +11,29 @@ public class Bird : MonoBehaviour
     private void Start()
     {
         // Load the saved bird color from PlayerPrefs (default to Blue if no selection)
-        BirdColor savedColor = (BirdColor)PlayerPrefs.GetInt("SelectedBirdColor", (int)BirdColor.Blue);
+        MenuBirdColor savedColor = (MenuBirdColor)PlayerPrefs.GetInt("SelectedBirdColor", (int)MenuBirdColor.Blue);
         SetBirdSprite(savedColor);
     }
 
     // Set the bird sprite based on the selected color
-    public void SetBirdSprite(BirdColor color)
+    public void SetBirdSprite(MenuBirdColor color)
     {
         switch (color)
         {
-            case BirdColor.Blue:
+            case MenuBirdColor.Blue:
                 spriteRenderer.sprite = blueBirdSprite;
                 break;
-            case BirdColor.Yellow:
+            case MenuBirdColor.Yellow:
                 spriteRenderer.sprite = yellowBirdSprite;
                 break;
-            case BirdColor.Red:
+            case MenuBirdColor.Red:
                 spriteRenderer.sprite = redBirdSprite;
                 break;
         }
     }
 }
 
-// Enum to represent the bird color (linked to sprite choice)
-public enum BirdColor
+public enum MenuBirdColor
 {
     Blue,
     Yellow,

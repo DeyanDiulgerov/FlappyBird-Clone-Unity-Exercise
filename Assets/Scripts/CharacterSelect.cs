@@ -11,16 +11,16 @@ public class CharacterSelect : MonoBehaviour
     private void Start()
     {
         // Load the saved bird color on start and apply it
-        BirdColor savedColor = (BirdColor)PlayerPrefs.GetInt("SelectedBirdColor", (int)BirdColor.Blue);
+        MenuBirdColor savedColor = (MenuBirdColor)PlayerPrefs.GetInt("SelectedBirdColor", (int)MenuBirdColor.Blue);
         ApplyBirdSprite(savedColor);
 
         // Set up button listeners
-        blueButton.onClick.AddListener(() => OnColorSelected(BirdColor.Blue));
-        yellowButton.onClick.AddListener(() => OnColorSelected(BirdColor.Yellow));
-        redButton.onClick.AddListener(() => OnColorSelected(BirdColor.Red));
+        blueButton.onClick.AddListener(() => OnColorSelected(MenuBirdColor.Blue));
+        yellowButton.onClick.AddListener(() => OnColorSelected(MenuBirdColor.Yellow));
+        redButton.onClick.AddListener(() => OnColorSelected(MenuBirdColor.Red));
     }
 
-    private void OnColorSelected(BirdColor color)
+    private void OnColorSelected(MenuBirdColor color)
     {
         // Save the selected bird color to PlayerPrefs
         PlayerPrefs.SetInt("SelectedBirdColor", (int)color);
@@ -31,11 +31,11 @@ public class CharacterSelect : MonoBehaviour
         ApplyBirdSprite(color);
     }
 
-    private void ApplyBirdSprite(BirdColor color)
+    private void ApplyBirdSprite(MenuBirdColor color)
     {
         // Find the Bird object and apply the correct sprite
         Debug.Log($"Apply color: {color}");
-        Bird bird = FindObjectOfType<Bird>();
+        ChangeBirdMenu bird = FindObjectOfType<ChangeBirdMenu>();
         if (bird != null)
         {
             bird.SetBirdSprite(color);
