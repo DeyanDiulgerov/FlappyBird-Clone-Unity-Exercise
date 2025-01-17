@@ -1029,6 +1029,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxTime: 1.5
   pipe: {fileID: 3412275955337606346, guid: 9345eb3f9e023834da38a9a4fca7fc34, type: 3}
+  coin: {fileID: 8204352427625261131, guid: ed19c2144c9630e45a846307e6639960, type: 3}
   height: 0.45
 --- !u!4 &809245159
 Transform:
@@ -1527,7 +1528,7 @@ GameObject:
   - component: {fileID: 1443985634}
   - component: {fileID: 1443985641}
   - component: {fileID: 1443985642}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mobile - Flappy Bird -  InGameBird
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2419,6 +2420,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932102145}
   m_CullTransparentMesh: 1
+--- !u!1001 &2974412359298198445
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -7891676819116460177, guid: ed19c2144c9630e45a846307e6639960, type: 3}
+      propertyPath: speed
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220652541074475374, guid: ed19c2144c9630e45a846307e6639960, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220652541074475374, guid: ed19c2144c9630e45a846307e6639960, type: 3}
+      propertyPath: m_CompositeOperation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818951446392864151, guid: ed19c2144c9630e45a846307e6639960, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818951446392864151, guid: ed19c2144c9630e45a846307e6639960, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.048
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818951446392864151, guid: ed19c2144c9630e45a846307e6639960, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.061347604
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818951446392864151, guid: ed19c2144c9630e45a846307e6639960, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818951446392864151, guid: ed19c2144c9630e45a846307e6639960, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818951446392864151, guid: ed19c2144c9630e45a846307e6639960, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818951446392864151, guid: ed19c2144c9630e45a846307e6639960, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818951446392864151, guid: ed19c2144c9630e45a846307e6639960, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818951446392864151, guid: ed19c2144c9630e45a846307e6639960, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818951446392864151, guid: ed19c2144c9630e45a846307e6639960, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204352427625261131, guid: ed19c2144c9630e45a846307e6639960, type: 3}
+      propertyPath: m_Name
+      value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204352427625261131, guid: ed19c2144c9630e45a846307e6639960, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed19c2144c9630e45a846307e6639960, type: 3}
 --- !u!1001 &7811305076877899814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2506,6 +2580,10 @@ PrefabInstance:
     - target: {fileID: 2895031763706684937, guid: 6f53eb83851eb3c478e662974393ee12, type: 3}
       propertyPath: m_Name
       value: Flappy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895031763706684937, guid: 6f53eb83851eb3c478e662974393ee12, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3171775919825983235, guid: 6f53eb83851eb3c478e662974393ee12, type: 3}
       propertyPath: m_Size.x
@@ -2618,3 +2696,4 @@ SceneRoots:
   - {fileID: 1185258529}
   - {fileID: 1017878906}
   - {fileID: 440603693}
+  - {fileID: 2974412359298198445}

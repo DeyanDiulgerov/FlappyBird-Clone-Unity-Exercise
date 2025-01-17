@@ -17,16 +17,10 @@ public class BirdSkinManager : MonoBehaviour
 
         // Set the bird's skin sprite
         if (selectedSkinIndex >= 0 && selectedSkinIndex < birdSkins.Length)
-        {
-            Debug.Log("Skin selected successfully");
             birdSpriteRenderer.sprite = birdSkins[selectedSkinIndex];
-        }
 
         // Set the animator controller based on the selected skin
         if (selectedSkinIndex >= 0 && selectedSkinIndex < birdAnimations.Length)
-        {
-            Debug.Log("Animation selected successfully");
             birdAnimator.runtimeAnimatorController = birdAnimations[selectedSkinIndex];
-        }
     }
 }

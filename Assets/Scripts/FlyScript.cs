@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class FlyScript : MonoBehaviour
 {
+    private Coin coin;
     private BirdSkinManager birdSkinAnimation;
     public GameManager gameManager;
     public float velocity = 1;
@@ -12,6 +13,7 @@ public class FlyScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.freezeRotation = true;
     }
 
     // Update is called once per frame
@@ -26,6 +28,12 @@ public class FlyScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        gameManager.GameOver();
+        // Layers 6 == Coin Layer
+        if (collision.gameObject.layer == 6)
+        {
+            Debug.Log("Hit a coin");
+        }
+        else
+            gameManager.GameOver();
     }
 }
